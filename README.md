@@ -5,7 +5,7 @@
 
 <!-- Glitch Effect Name Animation -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=45&duration=2000&pause=500&color=00D9FF&center=true&vCenter=true&multiline=true&width=800&height=120&lines=%3C%2F%3E+ISSAC+SUNNY;%7B+Modern+Web+Architect+%7D;Building+Digital+Experiences" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=45&duration=2000&pause=500&color=00D9FF&center=true&vCenter=true&multiline=true&width=800&height=120&lines=%3C%2F%3E+ISSAC+SUNNY;%7B+Modern+Software+Engineer+%7D;Building+Digital+Experiences" alt="Typing SVG" />
 </h1>
 
 <!-- Animated Subtitle with Glow Effect -->

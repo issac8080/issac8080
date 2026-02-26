@@ -1,193 +1,211 @@
-<!-- Cosmic Header with Floating Animation -->
-<div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,16,19&height=200&section=header&text=&fontSize=0&animation=fadeIn"/>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Issac Sunny — Professional Card-based README</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0d1117; --card:#0f1720; --muted:#94a3b8; --accent:#00d9ff; --accent-2:#64ffda; --pink:#ff6b9d;
+      --glass: rgba(255,255,255,0.04);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071028 0%, #0b1020 60%);font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    .wrap{max-width:1100px;margin:32px auto;padding:28px;display:grid;gap:22px;grid-template-columns:1fr;}
 
-<!-- Glitch Effect Name Animation -->
-<h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=45&duration=2000&pause=500&color=00D9FF&center=true&vCenter=true&multiline=true&width=800&height=120&lines=%3C%2F%3E+ISSAC+SUNNY;%7B+Software+Engineer+%7D;Building+Digital+Experiences" alt="Typing SVG" />
-</h1>
+    /* Header */
+    .header{display:flex;gap:18px;align-items:center}
+    .hero-img{flex:0 0 100%;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(2,6,23,0.7)}
+    .title{display:flex;flex-direction:column;gap:8px}
+    .name{font-family:'JetBrains Mono',monospace;font-size:28px;color:var(--accent);letter-spacing:0.8px}
+    .role{font-weight:600;color:var(--accent-2)}
+    .subtitle{color:var(--muted);font-size:14px}
 
-<!-- Animated Subtitle with Glow Effect -->
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=300&size=18&duration=4000&pause=1000&color=64FFDA&center=true&vCenter=true&width=600&lines=Crafting+Code+%E2%80%A2+Creating+Magic;Performance+Obsessed+Developer;Where+Innovation+Meets+Execution" alt="Subtitle" />
-</p>
+    /* Grid of cards */
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .card--full{grid-column:span 12}
+    .card--left{grid-column:span 4}
+    .card--mid{grid-column:span 4}
+    .card--right{grid-column:span 4}
 
-<!-- Matrix Rain Effect Divider -->
-<div align="center">
-  <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
-</div>
+    @media(max-width:900px){.card--left,.card--mid,.card--right{grid-column:span 12}.header{flex-direction:column}}
 
-<!-- Neon Badge Collection -->
-<div align="center">
-  <img src="https://img.shields.io/badge/🌟_Frontend_Wizard-00D9FF?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/⚡_Performance_Hunter-64FFDA?style=for-the-badge&logoColor=black" />
-  <img src="https://img.shields.io/badge/🚀_Deployment_Master-FF6B9D?style=for-the-badge&logoColor=white" />
-</div>
+    h3{margin:0 0 10px 0;color:var(--accent);font-size:16px}
+    p{margin:0;color:var(--muted);line-height:1.5}
 
-<br/>
+    /* tech badges grid */
+    .badges{display:flex;flex-wrap:wrap;gap:8px}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px;color:#fff}
 
-<!-- GitHub Stats with Animation -->
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=issac8080&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=64FFDA"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=issac8080&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&text_color=64FFDA"/>
-</div>
+    /* buttons & links */
+    .links{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#05131a;font-weight:700;text-decoration:none}
+    .muted-link{color:var(--muted);font-weight:600;text-decoration:none;padding:8px 10px;border-radius:8px;background:transparent}
 
-<!-- Streak Stats -->
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=issac8080&theme=tokyonight&hide_border=true&background=0D1117&ring=00D9FF&fire=64FFDA&currStreakLabel=00D9FF" alt="GitHub Streak" />
-</div>
+    /* stats image sizing */
+    .stats{display:flex;gap:12px;flex-direction:column}
+    .stats img{width:100%;height:auto;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
 
-<br/>
+    /* small list */
+    ul.meta{padding:0;margin:8px 0 0 0;list-style:none;display:flex;flex-direction:column;gap:6px}
+    ul.meta li{color:var(--muted);font-size:14px}
 
-## <img src="https://img.shields.io/badge/-About-00D9FF?style=flat-square&logo=user&logoColor=white" width="30" height="30"> **About This Digital Craftsman**
+    /* floating/soft animations */
+    .float{animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
 
-Passionate software engineer who transforms complex problems into elegant solutions. I specialize in building scalable, performant applications that users love. When I'm not coding, you'll find me exploring the latest tech trends, contributing to open source, or optimizing that one function that's been bugging me.
+    /* footer / connectors */
+    .connects{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 
-**What drives me:**
-- 🎯 Creating user experiences that feel magical
-- ⚡ Writing code that's both fast and maintainable
-- 🌱 Continuous learning and growth mindset
-- 🤝 Building tools that make developers' lives easier
+    /* minimal code block look */
+    .mono{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);background:var(--glass);padding:8px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
 
-<br/>
+    <!-- Header -->
+    <section class="header card card--full">
+      <div style="display:flex;gap:18px;align-items:center;width:100%">
+        <div style="flex:1">
+          <img class="hero-img float" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,16,19&height=140&section=header&text=&fontSize=0&animation=fadeIn" alt="Header" />
+        </div>
+        <div class="title" style="flex:0 0 420px;min-width:260px">
+          <div class="name">&lt;/&gt; ISSAC SUNNY; { Software Engineer }</div>
+          <div class="role">Building Digital Experiences — Performance Obsessed</div>
+          <div class="subtitle">Crafting fast, maintainable & delightful web applications · Open-source contributor</div>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <a class="btn" href="https://github.com/issac8080" target="_blank">GitHub</a>
+            <a class="muted-link" href="https://www.linkedin.com/in/issacsunny" target="_blank">LinkedIn</a>
+            <a class="muted-link" href="mailto:your.email@example.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-## <img src="https://img.shields.io/badge/-Tech_Stack-64FFDA?style=flat-square&logo=tools&logoColor=black" width="30" height="30"> **Tech Stack & Tools**
+    <!-- Top cards: About / Tech / Stats -->
+    <section class="grid card--full">
 
-### **Frontend Mastery**
-<div align="center">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-</div>
+      <article class="card card--left">
+        <h3>About</h3>
+        <p>Passionate software engineer focused on building scalable, performant user experiences. I write clear, testable code and love optimizing runtime and bundle size. Outside of work I enjoy learning new languages and contributing to open-source tools.</p>
 
-### **Backend & Database**
-<div align="center">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-  <img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" />
-</div>
+        <ul class="meta">
+          <li>🎯 Focus: Frontend architecture, performance & accessibility</li>
+          <li>⚡ Strengths: React, TypeScript, Next.js, Web performance</li>
+          <li>🌱 Mindset: Continuous learning, mentoring & clean code</li>
+        </ul>
 
-### **Cloud & DevOps**
-<div align="center">
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
-  <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" />
-  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" />
-</div>
+      </article>
 
-### **Tools & Others**
-<div align="center">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
-  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
-  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
-  <img src="https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white" />
-  <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black" />
-</div>
+      <article class="card card--mid">
+        <h3>Tech Stack</h3>
+        <div class="badges" style="margin-top:8px">
+          <!-- keep the badges you already used but presented as neat chips -->
+          <span class="badge">React</span>
+          <span class="badge">Next.js</span>
+          <span class="badge">TypeScript</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Tailwind CSS</span>
+          <span class="badge">Node.js</span>
+          <span class="badge">PostgreSQL</span>
+          <span class="badge">Docker</span>
+          <span class="badge">AWS</span>
+          <span class="badge">Vercel</span>
+        </div>
 
-<br/>
+        <h3 style="margin-top:14px">Currently Learning</h3>
+        <div class="badges">
+          <span class="badge">Rust</span>
+          <span class="badge">Go</span>
+          <span class="badge">Three.js</span>
+          <span class="badge">Web3.js</span>
+        </div>
+      </article>
 
-## <img src="https://img.shields.io/badge/-Activity-FF6B9D?style=flat-square&logo=github&logoColor=white" width="30" height="30"> **GitHub Activity**
+      <article class="card card--right stats">
+        <h3>GitHub Stats</h3>
+        <img src="https://github-readme-stats.vercel.app/api?username=issac8080&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=64FFDA" alt="GitHub stats" />
+        <img style="margin-top:10px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=issac8080&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&text_color=64FFDA" alt="Top languages" />
+      </article>
 
-<!-- GitHub Activity Graph -->
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=issac8080&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00D9FF&line=64FFDA&point=FF6B9D&area=true&area_color=00D9FF" alt="Activity Graph" />
-</div>
+    </section>
 
-<br/>
+    <!-- Middle row: Activity / Projects / Insights -->
+    <section class="grid card--full">
+      <article class="card card--left">
+        <h3>Activity</h3>
+        <img src="https://github-readme-activity-graph.vercel.app/graph?username=issac8080&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00D9FF&line=64FFDA&point=FF6B9D&area=true&area_color=00D9FF" alt="Activity graph" />
+        <p style="margin-top:8px" class="mono">Contributions · Commits · Issues · PRs</p>
+      </article>
 
-## <img src="https://img.shields.io/badge/-Connect-00D9FF?style=flat-square&logo=linkedin&logoColor=white" width="30" height="30"> **Let's Connect & Collaborate**
+      <article class="card card--mid">
+        <h3>Projects</h3>
+        <p>Open-source projects & prototypes focused on UX, performance and developer tooling.</p>
+        <ul class="meta" style="margin-top:8px">
+          <li>• Urban Place — AI-governed home services marketplace</li>
+          <li>• Performance analyzer — bundle & runtime insights</li>
+          <li>• Component library — accessible, themeable UI</li>
+        </ul>
+        <div style="margin-top:12px" class="links">
+          <a class="muted-link" href="https://github.com/issac8080">View repos</a>
+          <a class="muted-link" href="#projects">Case studies</a>
+        </div>
+      </article>
 
-<div align="center">
-  
-  <!-- Social Links -->
-  <a href="https://www.linkedin.com/in/issacsunny">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:your.email@example.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://github.com/issac8080">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  
-</div>
+      <article class="card card--right">
+        <h3>Insights</h3>
+        <p>I write about performance best-practices, front-end architecture and practical optimizations.</p>
+        <div style="margin-top:12px" class="connects">
+          <a class="muted-link" href="#blog">Latest posts</a>
+          <a class="muted-link" href="#notes">Notes & snippets</a>
+        </div>
+      </article>
+    </section>
 
-<br/>
+    <!-- Lower row: Connect / Contact / Jokes / Visitor -->
+    <section class="grid card--full">
+      <article class="card card--left">
+        <h3>Connect</h3>
+        <div class="connects" style="margin-top:8px">
+          <a class="muted-link" href="https://www.linkedin.com/in/issacsunny">LinkedIn</a>
+          <a class="muted-link" href="mailto:your.email@example.com">Email</a>
+          <a class="muted-link" href="https://github.com/issac8080">GitHub</a>
+        </div>
 
-## <img src="https://img.shields.io/badge/-Learning-64FFDA?style=flat-square&logo=book&logoColor=black" width="30" height="30"> **Currently Learning**
+        <h3 style="margin-top:12px">Contact</h3>
+        <p class="mono">your.email@example.com · Available for freelance & collaborations</p>
+      </article>
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" />
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" />
-  <img src="https://img.shields.io/badge/Web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" />
-</div>
+      <article class="card card--mid">
+        <h3>Fun</h3>
+        <p>Visitor counter and a rotating joke card to keep things friendly and approachable.</p>
+        <div style="margin-top:8px">
+          <img src="https://komarev.com/ghpvc/?username=issac8080&color=00D9FF&style=for-the-badge" alt="Profile Views" />
+        </div>
+        <div style="margin-top:8px">
+          <img src="https://readme-jokes.vercel.app/api?theme=tokyonight&hideBorder=true&bgColor=0D1117&textColor=64FFDA&qColor=00D9FF&aColor=FF6B9D" alt="Random Joke" />
+        </div>
+      </article>
 
-<br/>
+      <article class="card card--right">
+        <h3>Quick Links</h3>
+        <ul class="meta">
+          <li><a class="muted-link" href="#resume">Resume</a></li>
+          <li><a class="muted-link" href="#projects">Projects</a></li>
+          <li><a class="muted-link" href="#blog">Blog</a></li>
+        </ul>
+      </article>
+    </section>
 
-## <img src="https://img.shields.io/badge/-Insights-00D9FF?style=flat-square&logo=chartline&logoColor=white" width="30" height="30"> **Development Insights**
+    <!-- Footer animation -->
+    <section class="card card--full" style="text-align:center">
+      <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,16,19&height=110&section=footer&text=Thanks+for+visiting!+%F0%9F%9A%80&fontSize=28&animation=fadeIn&fontColor=ffffff" alt="footer" style="border-radius:10px;" />
+    </section>
 
-<div align="center">
-  
-  <!-- Contribution Calendar -->
-  <img src="https://github-readme-stats.vercel.app/api?username=issac8080&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=64FFDA&custom_title=Development%20Insights" />
-  
-</div>
-
-<br/>
-
-## <img src="https://img.shields.io/badge/-Projects-FF6B9D?style=flat-square&logo=code&logoColor=white" width="30" height="30"> **What I'm Working On**
-
-Currently focused on building scalable web applications and exploring cutting-edge technologies. Always open to collaboration on interesting projects and contributing to open-source initiatives that make a difference.
-
-**Current Focus Areas:**
-- 🎨 Creating beautiful, responsive user interfaces
-- ⚡ Optimizing application performance and load times
-- 🔒 Implementing robust security practices
-- 📱 Building cross-platform solutions
-- 🌐 Exploring modern web technologies
-
-<br/>
-
-## <img src="https://img.shields.io/badge/-Blog-64FFDA?style=flat-square&logo=blogger&logoColor=black" width="30" height="30"> **Blog & Articles**
-
-I occasionally write about my development journey, share tips, and document interesting solutions I've discovered. Check out my GitHub for code examples and technical insights.
-
-<br/>
-
-<!-- Animated Footer -->
-<div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,16,19&height=150&section=footer&text=Thanks+for+visiting!+%F0%9F%9A%80&fontSize=42&animation=fadeIn&fontColor=ffffff" />
-</div>
-
-<!-- Visitor Counter -->
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=issac8080&color=00D9FF&style=for-the-badge" alt="Profile Views" />
-</div>
-
-<!-- Random Joke Generator -->
-<div align="center">
-  <img src="https://readme-jokes.vercel.app/api?theme=tokyonight&hideBorder=true&bgColor=0D1117&textColor=64FFDA&qColor=00D9FF&aColor=FF6B9D" alt="Jokes Card" />
-</div>
-
-
-
+  </main>
+</body>
+</html>

@@ -191,4 +191,3 @@ I occasionally write about my development journey, share tips, and document inte
 
 
 
-make this more structured and organized and proffesionalistic
